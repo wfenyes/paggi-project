@@ -14,6 +14,11 @@ ul {
     padding: 0;
 }
 
+li:hover {
+    background-color: white;
+    color: black;
+}
+
 
 body {
     background-image: url("Resources/images/paper-background.jpg");
@@ -21,8 +26,15 @@ body {
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr .5fr;
-    grid-template-rows: .5fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr .5fr;
     gap: 20px;
+}
+
+.body-overlay {
+    position: relative;
+    z-index: 2;
+    color: black;
+    opacity: 50%;
 }
 
 li, h1, p, label{
@@ -35,7 +47,7 @@ li, h1, p, label{
 }
 
 .main-title-name {
-    font-size: 150px;
+    font-size: 125px;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -50,20 +62,38 @@ li, h1, p, label{
 
 .nav {
     grid-row: 2 / 4;
+    min-width: 280px;
 }
 
 .nav li {
-    margin: 30px 20px 0 20px;
-    padding: 0 20px 20px 20px;
+    margin: 0;
+    padding: 20px 10px;
     font-size: 40px;
     border-bottom: 1px solid white;
 }
 
 .nav li:last-child {
     border-bottom: none;
+    margin-top: 30px;
+}
+
+.social-icons:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons img{
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
 }
 
 .bio-and-photo {
+    min-width: 800px;
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
@@ -89,6 +119,7 @@ li, h1, p, label{
 
 .bio-container {
     grid-column: 2;
+    min-width: 300px;
 }
 
 
@@ -99,4 +130,11 @@ li, h1, p, label{
     text-align: center;
     margin-top: 30px;
     
+}
+
+
+/* Utility Classes */
+
+.bandw {
+    filter: grayscale(100%);
 }
