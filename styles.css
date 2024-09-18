@@ -7,6 +7,7 @@
 
 * {
     font-family: 'ibm-plex', serif;
+    margin: 0;
 }
 
 ul {
@@ -19,12 +20,21 @@ li:hover {
     color: black;
 }
 
+a {
+    display: block; 
+    text-decoration: none;
+    color: inherit;
+}
+
 
 body {
     /* background-image: url("Resources/images/paper-background.jpg");
     background-repeat: no-repeat;
     background-size: cover; */
     background-color: black;
+}
+
+.main-body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr .5fr;
     grid-template-rows: .5fr 1fr .5fr;
@@ -42,9 +52,18 @@ li, h1, p, label{
     color: white;
 }
 
+/* Get Lost text adventure section coming soon */
+
+.coming-soon {
+    font-size: 20px;
+}
+
 .main-title {
     grid-column: 1 / 5;
-    
+    position: sticky;
+    top: 0;
+    background-color: black;
+    height: 220px;
 }
 
 .main-title-name {
@@ -64,6 +83,8 @@ li, h1, p, label{
 .nav {
     grid-row: 2 / 4;
     min-width: 280px;
+    position: sticky;
+    top: 353.5px;
 }
 
 .nav li {
@@ -71,6 +92,14 @@ li, h1, p, label{
     padding: 20px 10px;
     font-size: 40px;
     border-bottom: 1px solid white;
+}
+
+/* .nav ul li a {
+    display: block;
+} */
+
+.nav li:first-child {
+    padding-top: 0;
 }
 
 .nav li:last-child {
@@ -134,8 +163,21 @@ li, h1, p, label{
 }
 
 
-/* Utility Classes */
+/* Making Good Reads look a little better with a white border */
 
 .goodReads {
     border: 1px solid white;
+}
+
+
+
+/* event.html section sytling */
+
+/* .event-flyer-container {
+    margin: 0 auto;
+} */
+
+.flyer {
+    width: 500px;
+
 }
