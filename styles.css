@@ -21,9 +21,10 @@ li:hover {
 
 
 body {
-    background-image: url("Resources/images/paper-background.jpg");
+    /* background-image: url("Resources/images/paper-background.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr .5fr;
     grid-template-rows: .5fr 1fr .5fr;
@@ -103,9 +104,8 @@ li, h1, p, label{
 }
 
 
-
 .photo-container {
-    grid-column: 1;
+    grid-column: 2;
     width: 100%;
     height: 500px;
 }
@@ -118,7 +118,8 @@ li, h1, p, label{
 }
 
 .bio-container {
-    grid-column: 2;
+    grid-row: 1;
+    grid-column: 1;
     min-width: 300px;
 }
 
@@ -135,6 +136,6 @@ li, h1, p, label{
 
 /* Utility Classes */
 
-.bandw {
-    filter: grayscale(100%);
+.goodReads {
+    border: 1px solid white;
 }
