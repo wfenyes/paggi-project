@@ -37,7 +37,7 @@ body {
 .main-body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr .5fr;
-    grid-template-rows: .5fr 1fr .5fr;
+    grid-template-rows: 220px 1fr .5fr;
     gap: 20px;
 }
 
@@ -176,8 +176,113 @@ li, h1, p, label{
 /* .event-flyer-container {
     margin: 0 auto;
 } */
+.event-flyers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    grid-row: 2/4;
+    grid-column: 2/4;
+
+}
+
+.event-flyer-container {
+    height: 500px;
+    width: 500px;
+}
+
 
 .flyer {
-    width: 500px;
+    object-fit: contain;
 
+
+}
+
+
+/* Read Free section styling */
+
+.read-free-section {
+    grid-row: 2 / 4;
+    grid-column: 2 /4;
+}
+
+.published-work-card {
+    color: white;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.published-work-card a {
+    display: inline;
+}
+
+.published-work-card:first-child {
+    padding-top: 50px;
+}
+
+.published-work-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translate(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: white;
+}
+
+/* Books Section Styling */
+
+.books-card-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    grid-row: 2 / 4;
+    grid-column: 2 /4;
+    z-index: -1;
+}
+
+.book-card {
+    width: 250px;
+    /* height: 100%; */
+    position: relative;
+    z-index: 2;
+}
+
+.book-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+}
+
+.cart-button {
+    background-color: white;
+    height: 50px;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 5px;
+    width: 75%;
+    border: 1px solid black;
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.cart-button p {
+    color: black;
+}
+
+.book-title {
+    margin-top: 30px;
+}
+
+.book-category {
+    font-style: italic;
+    font-size: .7rem;
 }
