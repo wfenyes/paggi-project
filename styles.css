@@ -266,6 +266,7 @@ li, h1, p, label{
 .read-free-section {
     grid-row: 2 / 4;
     grid-column: 2 /4;
+    z-index: -1;
 }
 
 .published-work-card {
