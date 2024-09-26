@@ -81,13 +81,14 @@ li, h1, p, label{
 }
 
 .nav {
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
     min-width: 280px;
     position: sticky;
     top: 353.5px;
 }
 
 .nav li {
+
     margin: 0;
     padding: 20px 10px;
     font-size: 40px;
@@ -241,6 +242,8 @@ li, h1, p, label{
     grid-row: 2 / 4;
     grid-column: 2 /4;
     z-index: -1;
+    margin-left: 20px;
+    margin-top: 30px;
 }
 
 .book-card {
