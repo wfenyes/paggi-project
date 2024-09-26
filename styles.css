@@ -20,6 +20,10 @@ li:hover {
     color: black;
 }
 
+li a {
+    display: inline;
+}
+
 a {
     display: block; 
     text-decoration: none;
@@ -269,7 +273,7 @@ li, h1, p, label{
 .read-free-section {
     grid-row: 2 / 4;
     grid-column: 2 /4;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .published-work-card {
@@ -282,6 +286,7 @@ li, h1, p, label{
 
 .published-work-card a {
     display: inline;
+    pointer-events: auto;
 }
 
 .published-work-card:first-child {
