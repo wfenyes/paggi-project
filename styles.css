@@ -26,6 +26,9 @@ a {
     color: inherit;
 }
 
+h2 {
+    color: white;
+}
 
 body {
     /* background-image: url("Resources/images/paper-background.jpg");
