@@ -313,29 +313,40 @@ li, h1, p, label{
     gap: 5rem;
     grid-row: 2 / 4;
     grid-column: 2 /4;
-    z-index: -1;
+    z-index: 1;
     margin-left: 20px;
     margin-top: 30px;
 }
 
 .book-card {
-    width: 250px;
+
     /* height: 100%; */
     position: relative;
-    z-index: 2;
+    width: 300px;
+    z-index: 1;
 }
 
-.book-card img {
-    width: 250px;
-    height: 250px;
+.book-img-container {
+    width: 300px;
+    height: 500px;
     border-radius: 10%;
+}
+
+.paypal-button {
+    text-align: center;
+}
+
+.book-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .cart-button {
     background-color: white;
     height: 50px;
     position: absolute;
-    top: 250px;
+    top: 500px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
