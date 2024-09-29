@@ -92,7 +92,8 @@ li, h1, p, label{
     grid-row: 2 / 3;
     min-width: 280px;
     position: sticky;
-    top: 353.5px;
+    /* top: 353.5px; */
+    top: 280px;
 }
 
 .nav li {
@@ -107,9 +108,9 @@ li, h1, p, label{
     display: block;
 } */
 
-.nav li:first-child {
+/* .nav li:first-child {
     padding-top: 0;
-}
+} */
 
 .nav li:last-child {
     border-bottom: none;
