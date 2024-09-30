@@ -133,6 +133,7 @@ li, h1, p, label{
 }
 
 .bio-and-photo {
+    margin-top: 30px;
     min-width: 800px;
     display: grid;
     gap: 1rem;
