@@ -185,8 +185,9 @@ li, h1, p, label{
 /* event.html section sytling */
 
 .event-flyers-container {
-    grid-row: 2/4;
-    grid-column: 2/4;
+    grid-area: bio;
+    /* grid-row: 2/4;
+    grid-column: 2/4; */
 
 }
 
@@ -194,6 +195,9 @@ li, h1, p, label{
     display: grid;
     grid-template-columns: 400px 1fr;
     grid-template-rows: .5fr 1fr;
+    grid-template-areas:
+    "one two"
+    "three four";
     margin:10px;
     min-width: 1000px;
     max-width: 1000px;
@@ -273,8 +277,9 @@ li, h1, p, label{
 /* Read Free section styling */
 
 .read-free-section {
-    grid-row: 2 / 4;
-    grid-column: 2 /4;
+    /* grid-row: 2 / 4;
+    grid-column: 2 /4; */
+    grid-area: bio;
     z-index: 1;
 }
 
@@ -381,3 +386,247 @@ li, h1, p, label{
 
 /* Media Queries Responsive */
 
+@media (max-width: 700px) {
+    .main-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "title"
+            "nav" 
+            "bio"
+            "news";
+        gap: 10px;
+    }
+
+    .bio-and-photo {
+        margin-top: 0px;
+        min-width: 300px;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+         "image" 
+         "written";
+        /* grid-row: 2;
+        grid-column: 2 /4; */
+        grid-area: bio;
+    
+    }
+
+    .nav {
+        /* grid-row: 2 / 3; */
+        grid-area: nav;
+        min-width: auto;
+        position: static;
+        top: auto;
+    }
+
+    .nav li {
+        text-align: center;
+    }
+
+    .main-title {
+        /* grid-column: 1 / 5; */
+        grid-area: title;
+        position: static;
+        top: auto;
+        background-color: black;
+        /* height: 100%;
+        width: 100%; */
+        z-index: 100;
+    }
+
+    .main-title-name {
+        font-size: 10vw;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main-title p {
+        text-align: center;
+        font-size: 5vw;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .event-card {
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "image"
+        "details"
+        "description";
+        margin:auto;
+        min-width: 450px;
+        justify-content: center;
+        max-width: auto;
+        position: auto;
+        z-index: 1;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    
+    .flyer-image-conatiner {
+        grid-area: image;
+        grid-column: auto;
+        grid-row: auto;
+        height: 350px;
+        width: 450px;
+    }
+    
+    
+    
+    .flyer {
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+    
+    
+    }
+    
+    .event-details {
+        grid-area: details;
+        grid-column: auto;
+        grid-row: auto;
+        margin-left: 0px;
+    }
+    
+    .event-description {
+        grid-area: description;
+        grid-column: auto;
+        grid-row: auto;
+        margin-top: 2rem;
+    }
+    
+    /* Line under each card. */
+    
+    .event-card:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        transform: translate(-50%);
+        width: 50%;
+        height: 2px;
+        background-color: white;
+    }
+    
+    /* Image right card */
+    
+    .flyer-image-conatiner-right {
+        grid-area: image;
+        grid-column: auto;
+        grid-row: auto;
+        height: 350px;
+        width: 450px;
+    }
+    
+    
+    
+    .event-details-right{
+        grid-area: details;
+        grid-column: auto;
+        grid-row: auto;
+        margin-left: 0;
+    }
+    
+    .event-description-right{
+        grid-area: description;
+        grid-column: auto;
+        grid-row: auto;
+        margin-top: 2rem;
+    }
+
+    .book-card {
+        /* display: grid;
+        grid-template-columns: 400px 1fr;
+        grid-template-rows: .5fr;
+        margin:10px;
+        min-width: 450px;
+        max-width: auto;
+        position: auto;
+        z-index: 1;
+        padding-bottom: 20px;
+        padding-top: 20px; */
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "book-image"
+        "book-details"
+        "book-description";
+        margin:auto;
+        min-width: 450px;
+        justify-content: center;
+        max-width: auto;
+        position: auto;
+        z-index: 1;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    
+    .book-image-conatiner {
+        grid-area: book-image;
+        grid-column: auto;
+        grid-row: auto;
+        height: 350px;
+        width: 450px;
+    }
+    
+    
+    
+    .book-image {
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+    
+    
+    }
+    
+    .book-details {
+        grid-area: book-details;
+        grid-column: auto;
+        grid-row: auto;
+        margin-left: 0;
+    }
+    
+    .book-description {
+        grid-area: book-description;
+        grid-column: auto;
+        grid-row: auto;
+        margin-top: 2rem;
+    }
+    
+    .buy-on-amazon-button {
+        background-color: white;
+        height: 25px;
+        width: 170px;
+        border-radius: 5px;
+    }
+    
+    .buy-on-amazon-button p {
+        text-align: center;
+        color: black;
+        padding: 2px;
+    }
+    
+    
+    /* Line under each card. */
+    
+    .book-card:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        transform: translate(-50%);
+        width: 50%;
+        height: 2px;
+        background-color: white;
+    }
+    
+    
+    
+}
